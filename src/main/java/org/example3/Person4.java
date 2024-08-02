@@ -1,16 +1,17 @@
 package org.example3;
 
-import org.example2.CheckPerson2;
-
 import java.time.LocalDate;
 import java.util.List;
 
-public class Person3 implements CheckPerson3 {
+public class Person4 implements CheckPerson3 {
+
+
 
     @Override
-    public boolean test(Person3 p) {
+    public boolean test(Person4 p) {
         return false;
     }
+
     public enum Sex {
         MALE, FEMALE
     }
@@ -21,7 +22,7 @@ public class Person3 implements CheckPerson3 {
     String emailAddress;
     Integer age;
 
-    public Person3(Integer age,String emailAddress, String name, LocalDate birthday, Sex gender) {
+    public Person4(Integer age,String emailAddress, String name, LocalDate birthday, Sex gender) {
         this.emailAddress = emailAddress;
         this.name = name;
         this.birthday = birthday;
@@ -102,8 +103,8 @@ public class Person3 implements CheckPerson3 {
 
 
     public static void printPersons(
-            List<Person3> roster, CheckPerson3 tester) {
-        for (Person3 p : roster) {
+            List<Person4> roster, CheckPerson3 tester) {
+        for (Person4 p : roster) {
             if (tester.test(p)) {
                 p.printPerson();
             }
